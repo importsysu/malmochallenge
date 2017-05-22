@@ -1,0 +1,68 @@
+\enableregime[utf]
+\usemodule[chinese]
+\usemodule[chart]
+\setuppagenumbering[state=no]
+
+\starttext
+
+\setupFLOWcharts[
+	nx=4,
+	ny=5,
+	dx=1.2\bodyfontsize,
+	dy=1.2\bodyfontsize,
+	width=8\bodyfontsize,
+	height=5\bodyfontsize,
+	maxwidth=2\textwidth
+]
+
+\startFLOWchart[capp]
+	\startFLOWcell
+		\name{Meta}
+		\location{2,2}
+		\shape{24}
+		\text{Meta}
+		\label[lt]{Goal}
+		\label[tr]{Resampling}
+		\label[br]{Qvalue}
+		\connection[rl]{pf}
+		\connection[lt]{Actor}
+	\stopFLOWcell
+	\startFLOWcell
+		\name{pf}
+		\location{4,2}
+		\shape{24}
+		\text{Particle Filter}
+		\label[lb]{update beliefs}
+		\connection[tt]{Meta}
+		\connection[bt]{Cri}
+	\stopFLOWcell
+	\startFLOWcell
+		\name{Actor}
+		\location{1,3}
+		\shape{24}
+		\text{Actor}
+		\connection[bl]{Env}
+	\stopFLOWcell
+	\startFLOWcell
+		\name{Cri}
+		\location{4,4}
+		\shape{24}
+		\text{Critic}
+		\label[tl]{normalize}
+		\connection[lb]{Meta}
+	\stopFLOWcell
+	\startFLOWcell
+		\name{Env}
+		\location{2,4}
+		\shape{24}
+		\text{Environment}
+		\label[rt]{state}
+		\label[lt]{action}
+		\connection[rl]{Cri}
+	\stopFLOWcell
+\stopFLOWchart
+
+\FLOWchart[capp]
+%\midaligned{\FLOWchart[capp]}
+
+\stoptext

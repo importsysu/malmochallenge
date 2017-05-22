@@ -1,0 +1,109 @@
+open source     > 1 > 1 > /usr/share/texmf/tex/context/base/cont-yes.mkiv
+
+ConTeXt  ver: 2015.05.18 12:26 MKIV current  fmt: 2017.5.19  int: english/english
+
+system          > 'cont-new.mkiv' loaded
+open source     > 2 > 2 > /usr/share/texmf/tex/context/base/cont-new.mkiv
+close source    > 2 > 2 > /usr/share/texmf/tex/context/base/cont-new.mkiv
+system          > files > jobname 'chart', input './chart', result 'chart'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > 2 > 3 > /home/w007878/workspace/ai_contest/doc/chart.tex
+resolvers       > modules > 'chinese' is not found
+resolvers       > modules > 'chart' is loaded
+interface       > macros > processed mkvi file '/usr/share/texmf/tex/context/base/m-chart.mkvi', delta 282
+interface       > macros > processed mkvi file '/usr/share/texmf/tex/context/base/m-chart.mkvi', delta 0
+open source     > 3 > 4 > /usr/share/texmf/tex/context/base/m-chart.mkvi
+resolvers       > lua > loading file '/usr/share/texmf/tex/context/base/m-chart.lua' succeeded
+close source    > 3 > 4 > /usr/share/texmf/tex/context/base/m-chart.mkvi
+fonts           > preloading latin modern fonts (second stage)
+fonts           > 'fallback modern-designsize rm 12pt' is loaded
+metapost        > initializing instance 'metafun' using format 'metafun'
+metapost        > loading 'metafun' as '/usr/share/texmf/metapost/context/base/metafun.mpiv' using method 'default'
+metapost        > initializing number mode 'scaled'
+backend         > xmp > using file '/usr/share/texmf/tex/context/base/lpdf-pdx.xml'
+pages           > flushing realpage 1, userpage 1
+close source    > 2 > 4 > /home/w007878/workspace/ai_contest/doc/chart.tex
+close source    > 1 > 4 > /usr/share/texmf/tex/context/base/cont-yes.mkiv
+
+system          > structure > start used structure
+
+used structure  > text: chart
+
+system          > structure > stop used structure
+
+
+system          > files > start used files
+
+used file       >    1: filename=cont-yes.mkiv filetype=tex foundname=/usr/share/texmf/tex/context/base/cont-yes.mkiv usedmethod=database
+used file       >    2: filename=publ-imp-default.lua filetype=lua foundname=/usr/share/texmf/tex/context/base/publ-imp-default.lua usedmethod=database
+used file       >    3: filename=cont-new.mkiv filetype=tex foundname=/usr/share/texmf/tex/context/base/cont-new.mkiv usedmethod=database
+used file       >    4: filename=lang-us.lua filetype=lua foundname=/usr/share/texmf/tex/context/patterns/lang-us.lua usedmethod=database
+used file       >    5: filename=/home/w007878/workspace/ai_contest/doc/chart.tex foundname=/home/w007878/workspace/ai_contest/doc/chart.tex usedmethod=direct
+used file       >    6: filename=m-chart.mkvi filetype=tex foundname=/usr/share/texmf/tex/context/base/m-chart.mkvi usedmethod=database
+used file       >    7: filename=m-chart.lua filetype=tex format=tex foundname=/usr/share/texmf/tex/context/base/m-chart.lua usedmethod=database
+used file       >    8: filename=lm.lfg filetype=tex foundname=/usr/share/texmf/tex/context/fonts/lm.lfg usedmethod=database
+used file       >    9: filename=lmroman12-regular filetype=otf format=otf foundname=/usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf usedmethod=database
+used file       >   10: filename=latinmodern-math.otf filetype=opentypefonts foundname=/usr/share/texmf/fonts/opentype/public/lm-math/latinmodern-math.otf usedmethod=database
+used file       >   11: filename=metafun.mpiv filetype=mp foundname=/usr/share/texmf/metapost/context/base/metafun.mpiv usedmethod=database
+used file       >   12: filename=mp-base.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-base.mpiv usedmethod=database
+used file       >   13: filename=mp-tool.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-tool.mpiv usedmethod=database
+used file       >   14: filename=mp-mlib.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-mlib.mpiv usedmethod=database
+used file       >   15: filename=mp-luas.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-luas.mpiv usedmethod=database
+used file       >   16: filename=mp-page.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-page.mpiv usedmethod=database
+used file       >   17: filename=mp-butt.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-butt.mpiv usedmethod=database
+used file       >   18: filename=mp-shap.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-shap.mpiv usedmethod=database
+used file       >   19: filename=mp-grph.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-grph.mpiv usedmethod=database
+used file       >   20: filename=mp-grid.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-grid.mpiv usedmethod=database
+used file       >   21: filename=mp-form.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-form.mpiv usedmethod=database
+used file       >   22: filename=mp-figs.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-figs.mpiv usedmethod=database
+used file       >   23: filename=mp-func.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-func.mpiv usedmethod=database
+used file       >   24: filename=mp-char.mpiv filetype=mp format=mp foundname=/usr/share/texmf/metapost/context/base/mp-char.mpiv usedmethod=database
+used file       >   25: filename=lpdf-pdx.xml filetype=tex foundname=/usr/share/texmf/tex/context/base/lpdf-pdx.xml usedmethod=database
+
+system          > files > stop used files
+
+
+system          > options > start commandline options
+
+used option     > currentrun="1"
+used option     > fulljobname="./chart.tex"
+used option     > input="./chart.tex"
+used option     > kindofrun="1"
+used option     > maxnofruns="9"
+used option     > no-parse-first-line="true"
+
+system          > options > stop commandline options
+
+system          > options > start commandline files
+
+used file       >    1: ./chart.tex
+
+system          > options > stop commandline files
+
+
+mkiv lua stats  > used config file: /usr/share/texmf/web2c/texmfcnf.lua;/usr/share/texlive/texmf-dist/web2c/texmfcnf.lua
+mkiv lua stats  > used cache path: readable: '/var/lib/texmf/luatex-cache/context/b47c3d3cee7cb6c86268d0595268c442' | readable+writable: '/home/w007878/.texmf-var/luatex-cache/context/b47c3d3cee7cb6c86268d0595268c442'
+mkiv lua stats  > resource resolver: loadtime 0.014 seconds, 0 scans with scantime 0.000 seconds, 0 shared scans, 25 found files, scanned paths: <none>
+mkiv lua stats  > stored bytecode data: 371 modules (0.177 sec), 78 tables (0.006 sec), 449 chunks (0.183 sec)
+mkiv lua stats  > traced context: maxstack: 1149, freed: 17, unreachable: 1132
+mkiv lua stats  > running in nuts mode: yes
+mkiv lua stats  > cleaned up reserved nodes: 47 nodes, 439 lists of 438
+mkiv lua stats  > node memory usage: 2 glue, 2 penalty, 9 attribute, 35 glue_spec, 3 attribute_list, 2 temp
+mkiv lua stats  > node list callback tasks: 6 unique task lists, 5 instances (re)created, 76 calls
+mkiv lua stats  > used backend: pdf (backend for directly generating pdf output)
+mkiv lua stats  > loaded tex modules: 2 requested, 1 found (*-chart), 1 missing (*-chinese)
+mkiv lua stats  > loaded patterns: en::2, load time: 0.000
+mkiv lua stats  > jobdata time: 0.000 seconds saving, 0.000 seconds loading
+mkiv lua stats  > callbacks: 357 direct, 777 indirect, 1134 total
+mkiv lua stats  > randomizer: resumed with value 0.44689651273512
+mkiv lua stats  > result saved in file: chart.pdf, compresslevel 3, objectcompresslevel 3
+mkiv lua stats  > loaded fonts: 2 files: latinmodern-math.otf, lmroman12-regular.otf
+mkiv lua stats  > fonts load time: 0.159 seconds 
+mkiv lua stats  > metapost processing time: 0.012 seconds, loading: 0.128, execution: 0.010, n: 1, average: 0.151, instances: 1, memory: 2.524 M
+mkiv lua stats  > used platform: linux-64, type: unix, binary subtree: usr
+mkiv lua stats  > luatex banner: this is luatex, version beta-0.80.0 (tex live 2015/debian) (rev 5238)
+mkiv lua stats  > control sequences: 43553 of 65536 + 100000
+mkiv lua stats  > lua properties: engine: lua, used memory: 58 MB (ctx: 57 MB), hash type: lua, hash chars: min(64,40), symbol mask: utf (τεχ)
+mkiv lua stats  > runtime: 0.756 seconds, 1 processed pages, 1 shipped pages, 1.323 pages/second
+

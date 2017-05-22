@@ -1,0 +1,20 @@
+# Fdb version 3
+["pdflatex"] 1495464244 "formula.tex" "formula.pdf" "formula" 1495464245
+  "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty" 1456875012 2210 5c54ab129b848a5071554186d0168766 ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty" 1456875012 4160 c115536cf8d4ff25aa8c1c9bc4ecb79a ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty" 1467147727 82033 ff9a037b5bad3f86db2c1a9e5c8160c3 ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty" 1459635588 4115 318a66090112f3aa3f415aeb6fe8540f ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty" 1456875012 2431 fe3078ec12fc30287f568596f8e0b948 ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls" 1459635588 19821 310da678527a7dfe2a02c88af38079b7 ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/base/size10.clo" 1459635588 8292 e897c12e1e886ce77fe26afc5d470886 ""
+  "/usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf" 1470266149 31958 926ad82bc47ee89401cf24be7d2cbf7d ""
+  "/usr/local/texlive/2016/texmf-var/web2c/xetex/xelatex.fmt" 1479321290 3543607 bdb6ffdf6a3d7d6d6c210e3cee24de57 ""
+  "/usr/local/texlive/2016/texmf.cnf" 1479321254 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "formula.aux" 1495464244 8 a94a2480d3289e625eea47cd1b285758 ""
+  "formula.tex" 1495464243 499 83f0bb5cba43f492579e0d424cd3104d ""
+  (generated)
+  "formula.pdf"
+  "formula.aux"
+  "formula.log"

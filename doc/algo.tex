@@ -1,0 +1,77 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage{ctex}
+\usepackage{clrscode3e}
+\usepackage{amsmath}
+
+\DeclareMathOperator*{\argmax}{argmax}
+
+\begin{document}
+
+% \begin{codebox}
+% \Procname{$\proc{1.Collecting-Data}$}
+% \zi $\kw{Initialize}~~\proc{Replay-Buffer}~D$
+% \zi $\gamma\gets\gamma_0$
+% \zi $p\gets [\id{Uniform-Distribution}]$
+% \zi \For $episode\gets 1$ \To $M$ \Do
+% \zi $\kw{Initialize}~~\proc{Temp-Buffer}~G,~~\proc{State}~S,~~\proc{Behavioral-Policy}~\mu$
+% \zi		\For  $step\gets 1$ \To $\attrib{episode}{length}$ \Do
+% \zi			$r,S'\gets\proc{transition}(S,\mu)$
+% \zi			$\attrib{G}{\proc{store}}(S)$
+% \zi			$\id{Goal}~g\gets S'$
+% \zi			$\kw{Update}~~p$ \>\>\>\>\>\>\Comment update the collaborator
+% \zi         \For \id{state} \kw{in} $G$ \Do
+% \zi				$\tilde{r}\gets \mbox{discount sum of reward from \id{state} to }S'$
+% \zi				$\tilde{\gamma}\gets \gamma^{step}$
+% \zi				$\tilde{S}\gets \proc{Concatenate}(S,p)$
+% \zi				$\tilde{S'}\gets\proc{Concatenate}(S',p)$
+% \zi				$\attrib{D}{\proc{store}}(\proc{transition}(\tilde{S},g,\tilde{r},\tilde{S'}))$
+% 	 		\End
+% 		\End
+% 	\End
+% \end{codebox}
+%
+% \begin{codebox}
+% \Procname{$\proc{2.Training}(\id{Modified~DQN}:\id{offline})$}
+% \zi $\kw{Initialize}~~\proc{Action-Value-Function}(\theta)~Q$
+% \zi $\kw{Initialize}~~\proc{Target-Action-Value-Function}(\theta^{-}=\theta)~\hat{Q}$
+% \zi \For $t\gets 1$ \To $T$ \Do
+% \zi	\kw{Sample} $\proc{Minibatch}<\hat{S},g,\hat{r},\hat{S'},\hat{\gamma}>$ \kw{from} $D$
+% \zi $y=\hat{r}+\hat{\gamma}\cdot\max Q_{\theta}\left(\hat{S'}, \argmax\limits_{g} Q_{\theta^{-}}(\hat{S},g)\right)$
+% \zi \kw{Perform} SGD \kw{on} $[y-Q_{\theta}(\hat{S},g)]^2$ with respect to $\theta$
+% \zi Every $C$ steps \kw{reset} $\hat{Q}=Q$
+% \End
+% \end{codebox}
+
+\begin{codebox}
+\Procname{$\proc{Training}$}
+\zi $\kw{initialize}~~\proc{Replay-Memory}(\id{capacity~N})~D$
+\zi $\kw{initialize}~~\proc{Action-Value-Function}(\id{random~weight~\theta})~Q$
+\zi $\kw{initialize}~~\proc{Target-Action-Value-Function}(\theta^{-}=\theta)~\hat{Q}$
+\zi	\For $episode \gets 1$ \To $M$ \Do
+\zi		$\kw{initialize}~~\proc{State}~S,~~\proc{Temp-Buffer}~G$
+\zi		$\kw{initialize}~~\proc{Collabortor-Probability-Vector}(\id{Uniform})~p$
+\zi		\For $step\gets 1$ \To $T$\Do
+\zi				$\tilde{r}\gets \mbox{discount sum of reward \kw{from} \id{S} to }S'$
+\zi				$\tilde{\gamma}\gets \gamma^{step}$
+\zi				$\tilde{S}\gets \proc{Concatenate}(S,p)$
+\zi				$\tilde{S'}\gets\proc{Concatenate}(S',p)$
+\zi				$\kw{store}~\proc{transition}(\tilde{S},g,\tilde{r},\tilde{S'})~\kw{in}~D$
+\zi				$a_t=\left\{\begin{array}{lc}
+								\id{random~action} & \mbox{with probality}\,\epsilon \\
+								\argmax\limits_a Q_{\theta}(s,g) & \mbox{otherwise}
+					\end{array}\right.$
+\zi				\kw{execute} $a_t$,~~\kw{observe} \proc{Reward} $r_t$,~~$S\gets\proc{Next-State}~S'$
+%\zi			\kw{choose} $\proc{Random-Action}~a_t$ \kw{from} \proc{Probability} $\epsilon$
+\zi				\kw{update} $p$ \kw{with} normalized-\proc{Behavior-Vector}
+%\zi				\kw{update} \proc{Behavior-Vector} from collabortor's behavior
+\zi			\kw{sample} $\proc{Minibatch}<\tilde{S},g,\tilde{r},\tilde{S'},\tilde{\gamma}>$ \kw{from} $D$
+\zi 		$y=\tilde{r}+\tilde{\gamma}\cdot\max Q_{\theta}\left(\tilde{S'}, \argmax\limits_{g} Q_{\theta^{-}}(\tilde{S},g)\right)$
+\zi 		\kw{perform} SGD \kw{on} $[y-Q_{\theta}(\tilde{S},g)]^2$ with respect to $\theta$
+\zi 		\kw{reset} $\hat{Q}=Q$ every $C$ steps
+			\End
+\zi		\kw{resample} \kw{from} $p$ every $C'$ steps
+		\End
+\end{codebox}
+
+\end{document}

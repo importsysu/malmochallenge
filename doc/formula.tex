@@ -1,0 +1,17 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\DeclareMathOperator*{\argmax}{argmax}
+
+
+\begin{document}
+
+\begin{equation*}
+%Q(s,g)=Q(s,g)+\alpha\cdot(\tilde{r}+\tilde{\gamma}\max\limits_{g'}Q(s',g')-Q(s,g))
+Q(s,\,g)=Q(s,\,g)+\alpha\left(\tilde{r}+\tilde{\gamma}\cdot\max \hat{Q}_{\theta^{\textnormal{-}}}\left(\tilde{S'},\,\argmax\limits_g Q_{\theta}(\tilde{S'},\,g)\right)-Q(s,\,g)\right)
+\end{equation*}
+
+where $\tilde{r}=\sum_{k=0}^n\gamma^k\cdot r,~\tilde{\gamma}=\gamma^{n+1}$
+
+\end{document}
