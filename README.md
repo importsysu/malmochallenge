@@ -57,7 +57,5 @@ Vs bad
 * [7] Hasselt H V. Double Q-learning[C]. _Advances in Neural Information Processing Systems. 2010: 2613-2621._
 * [8] Microsoft Co. Task and example code for the Malmo Collaborative AI Challenge, [_Github code_](https://github.com/Microsoft/malmo-challenge)
 
-#### For Video:
-1. strategies: flank, ambush, chase, change ,
-2. different types of agent,
-3. take advantage of the characteristic of the agent
+### Video Link
+[Video](https://youtu.be/GR5rj8rRylc)
