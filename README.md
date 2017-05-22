@@ -3,7 +3,7 @@ Minghan Li, Fan Mo, Ancong Wu
 
 ----
 ### Abstract
-The difficulty of this challenge comes from the uncertainty of the collaborator’s behavior and the conditions of success. Under the context of this task, we hope the agent can learn strategies like swinging and ambushing as well as taking advantage of the behavioral pattern of the collaborator. Therefore, temporal abstraction and inference are needed for this specific task. We make three main contributions in this work:
+The difficulty of this challenge comes from the uncertainty of the collaborator’s behavior and the conditions of success. Under the context of this task, we hope the agent can learn strategies like flanking and ambushing as well as taking advantage of the behavioral pattern of the collaborator. Therefore, temporal abstraction and inference are needed for this specific task. We make three main contributions in this work:
 1. combine Double Deep Q-Network [[3]](#reference) with the option framework [[2]](#reference) to produce the Hierarchical Double Deep Q-Network, or HiDDeN;
 1. add particle filter [[4]](#reference) module to make inference to the collaborator’s behavior;
 1. develop a technique called “Goal Swapping” to speed up the learning process.
@@ -54,6 +54,6 @@ Vs bad
 * [8] Microsoft Co. Task and example code for the Malmo Collaborative AI Challenge, [_Github code_](https://github.com/Microsoft/malmo-challenge)
 
 #### For Video:
-1. strategies: swing, ambush, chase, change ,
+1. strategies: flank, ambush, chase, change ,
 2. different types of agent,
 3. take advantage of the characteristic of the agent
