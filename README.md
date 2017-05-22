@@ -58,4 +58,4 @@ Vs bad
 * [8] Microsoft Co. Task and example code for the Malmo Collaborative AI Challenge, [_Github code_](https://github.com/Microsoft/malmo-challenge)
 
 ### Video Link
-[Video](https://youtu.be/GR5rj8rRylc)
+[Video](https://youtu.be/GR5rj8rRy1c)
