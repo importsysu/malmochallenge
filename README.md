@@ -13,9 +13,12 @@ Because of the our limited resources, we have to split up the learning process i
 ### Introduction
 The task of this Pig Chase Challenge basically requires us to design a agent to cooperate with another one to catch a pig in a fence, which is worth 25 points. The agent can also choose to go to the lapis blocks to get 5 points and end the game early. The agent will be tested with multiple kinds of cooperators and see its overall performance. The link of this challenge is [here](https://github.com/Microsoft/malmo-challenge/blob/master/ai_challenge/pig_chase/README.md).
 
+![Pig chase](doc/pig-chase-overview.png)
+>Figure 1: The overview of the pig chase challenge from https://github.com/Microsoft/malmo-challenge/blob/master/ai_challenge/pig_chase/README.md.
+
 ### Model structure
 ![Model structure](doc/chart-cut.png)
->Figure 1: The Critic contains a Deep Q-Network[1], outputs Q-values for each goal given the current state. The Meta is the central controller of the hierarchical model, receives Q-values from the critic and specifies the goal. The Actor is an AStar agent, which moves greedily to the current goal. The particle filter module is used to encode the behavior of our collaborator.
+>Figure 2: The Critic contains a Deep Q-Network[1], outputs Q-values for each goal given the current state. The Meta is the central controller of the hierarchical model, receives Q-values from the critic and specifies the goal. The Actor is an AStar agent, which moves greedily to the current goal. The particle filter module is used to encode the behavior of our collaborator.
 
 The temporal abstractions (high level strategies) are usually very difficult to define, even to be learned [[5]](#reference). Thus, we use the concept of sub goals [[6]](#reference), which are specific coordinates in this task. Therefore the Q-value function we use is Q(s, g) instead of Q(s, a). It avoids training the agent using primitive actions and  speeds up the data collecting process.
 
@@ -46,7 +49,7 @@ Since we didn’t deploy Project Malmo on our GPU machine, the whole learning pr
 
 ### Evaluation Results (compare with the baseline)
 ![VS focused](doc/results.png)
->Figure 2: The results of HiDDeN vs Focused and Focused vs Focused. The Red Line represents the Fouced agent and the Blue one represents HiDDeN agent. We can see our method indeed outperforms the astar heuristics.
+>Figure 3: The results of HiDDeN vs Focused and Focused vs Focused. The Red Line represents the Fouced agent and the Blue one represents HiDDeN agent. We can see our method indeed outperforms the astar heuristic.
 
 ---
 ### Reference
