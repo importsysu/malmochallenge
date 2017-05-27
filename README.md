@@ -4,11 +4,14 @@ Minghan Li, Fan Mo, Ancong Wu
 ----
 ### Abstract
 The difficulty of this challenge comes from the uncertainty of the collaborator’s behavior and the conditions of success. Under the context of this task, we hope the agent can learn strategies like flanking and ambushing as well as taking advantage of the behavioral pattern of the collaborator. Therefore, temporal abstraction and inference are needed for this specific task. We make three main contributions in this work:
-1. combine Double Deep Q-Network [[3]](#reference) with the option framework [[2]](#reference) to produce the Hierarchical Double Deep Q-Network, or HiDDeN;
-1. add particle filter [[4]](#reference) module to make inference to the collaborator’s behavior;
-1. develop a technique called “Goal Swapping” to speed up the learning process.
+1. Combine Double Deep Q-Network [[3]](#reference) with the option framework [[2]](#reference) to produce the Hierarchical Double Deep Q-Network, or HiDDeN;
+1. Add particle filter [[4]](#reference) module to make inference to the collaborator’s behavior;
+1. Develop a technique called “Goal Swapping” to speed up the learning process.
 
-Because of the our limited resources, we have to split up the learning process into data collecting on CPUs and training on GPUs.As we know the model will be likely to overfit the dataset in this way, especially for the model like neural network. However, the result does show that with HiDDeN, the agent is able to learn some high level strategies and emerges collaborative patterns.
+Because of the our limited resources, we have to split up the learning process into data collecting on CPUs and training on GPUs. As we know the model will be likely to overfit the dataset in this way, especially for the model like neural network. However, the result does show that with HiDDeN, the agent is able to learn some high level strategies and emerges collaborative patterns.
+
+### Introduction
+The task of this Pig Chase Challenge basically requires us to design a agent to cooperate with another one to catch a pig in a fence, which is worth 25 points. The agent can also choose to go to the lapis blocks to get 5 points and end the game early. The agent will be tested with multiple kinds of cooperators and see it's overall performance. The link of this challenge is [here](https://github.com/Microsoft/malmo-challenge/blob/master/ai_challenge/pig_chase/README.md).
 
 ### Model structure
 ![Model structure](doc/chart-cut.png)
@@ -62,6 +65,8 @@ Since we didn’t deploy Project Malmo on our GPU machine, the whole learning pr
 * MessagePack
 * Numpy
 * [Other Dependencies](https://github.com/Microsoft/malmo-challenge)
+
+1. After you install all the dependencies, put the HiDDeN in malmo-challenge/ai_challenge/pig_chase/([downloads](https://github.com/Microsoft/malmo-challenge/blob/master/ai_challenge/pig_chase/README.md)), and run python test.py to see the agent's performance. Once
 
 ### Video Link
 * [Video](https://youtu.be/GR5rj8rRy1c)
