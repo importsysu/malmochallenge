@@ -42,9 +42,8 @@ Since we didn’t deploy Project Malmo on our GPU machine, the whole learning pr
 ![Algorithm](doc/algo-offline-cut.png)
 
 ### Evaluation (compare with the baseline)
-Vs focused
-Vs random
-Vs bad
+![VS focused](doc/results.png)
+>Figure 2: The results of HiDDeN vs Focused and Focused vs Focused. The Red Line represents the Fouced agent and the Blue one represents HiDDeN agent. We can see our method indeed outperforms the astar heuristics.
 
 ---
 ### Reference
@@ -62,6 +61,7 @@ Vs bad
 * Tensorflow 1.0
 * MessagePack
 * Numpy
+* [Other Dependencies](https://github.com/Microsoft/malmo-challenge)
 
 ### Video Link
-[Video](https://youtu.be/GR5rj8rRy1c)
+* [Video](https://youtu.be/GR5rj8rRy1c)
