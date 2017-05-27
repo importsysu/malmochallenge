@@ -57,5 +57,11 @@ Vs bad
 * [7] Hasselt H V. Double Q-learning[C]. _Advances in Neural Information Processing Systems. 2010: 2613-2621._
 * [8] Microsoft Co. Task and example code for the Malmo Collaborative AI Challenge, [_Github code_](https://github.com/Microsoft/malmo-challenge)
 
+### Installation Dependencies
+* Python 2.7
+* Tensorflow 1.0
+* MessagePack
+* Numpy
+
 ### Video Link
 [Video](https://youtu.be/GR5rj8rRy1c)
