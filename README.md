@@ -66,7 +66,17 @@ Since we didn’t deploy Project Malmo on our GPU machine, the whole learning pr
 * Numpy
 * [Other Dependencies](https://github.com/Microsoft/malmo-challenge)
 
-1. After you install all the dependencies, put the HiDDeN in malmo-challenge/ai_challenge/pig_chase/([downloads](https://github.com/Microsoft/malmo-challenge/blob/master/ai_challenge/pig_chase/README.md)), and run python test.py to see the agent's performance. Once
+1. After you install all the dependencies, put the HiDDeN in malmo-challenge/ai_challenge/pig_chase/([downloads](https://github.com/Microsoft/malmo-challenge/blob/master/ai_challenge/pig_chase/README.md)), and run
+
+ **python test.py**
+
+ to see the agent's performance. If you want to retrain the agent, simply type:
+
+ **python train.py**
+
+  or you want use GPUS, it requires tensorflow 0.8 rather than 1.0, type:
+
+  **python train_gpu.py**
 
 ### Video Link
 * [Video](https://youtu.be/GR5rj8rRy1c)
