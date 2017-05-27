@@ -30,7 +30,7 @@ Q-learning is known to have the overestimation problem, especially in the non-st
 ![formula](doc/formula-cut.png)
 
 **Meta Module:**
-The Meta produces goal based on the Q value from the Critic, and it also uses particle filtering [[4]](#reference) to update the agent’s belief about the behavioral pattern of the collaborator. We use a vector to encode the collaborator’s type by using the noisy reading from its behavior. By doing resampling from the normalized probability vector in each episode, we can make our agent to be more adaptive to the changes of the collaborator’s behavior. The normalized vector will also be concatenated with the state feature vector to be the input of the Critic.
+The Meta produces goal based on the Q value from the Critic, and it also uses **particle filter** [[4]](#reference) to update the agent’s belief about the behavioral pattern of the collaborator. We use a vector to encode the collaborator’s type by using the noisy reading from its behavior. By doing resampling from the normalized probability vector in each episode, we can make our agent to be more adaptive to the changes of the collaborator’s behavior. The normalized vector will also be concatenated with the state feature vector to be the input of the Critic.
 
 **Actor Module:**
 It basically is an AStar agent, which receives goal from Meta and act greedily to it. The code for the Actor Module is modified from the provided AStar agent [[8]](#reference).
