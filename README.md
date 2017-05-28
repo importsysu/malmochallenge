@@ -82,4 +82,3 @@ Since we dont't deploy Project Malmo on GPUs, the whole learning process is spli
 * [7] Hasselt H V. Double Q-learning[C]. _Advances in Neural Information Processing Systems. 2010: 2613-2621._
 * [8] Microsoft Co. Task and example code for the Malmo Collaborative AI Challenge, [_Github code_](https://github.com/Microsoft/malmo-challenge)
 
-
