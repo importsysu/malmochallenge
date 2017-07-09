@@ -6,7 +6,6 @@ Minghan Li, Fan Mo, Ancong Wu
 The difficulty of this challenge comes from the uncertainty of the collaborator’s behavior and the conditions of success(requires two agents to corner the pig rather than to move directly to the pig's location). Under the context of this task, we hope the agent can learn strategies like flanking and ambushing as well as taking advantage of the behavioral pattern of the collaborator to catch the pig. Therefore, **temporal abstraction** and **inference** are needed for this specific task. We make three main contributions in this work:
 1. Combine Double Deep Q-Network [[3]](#reference) with the option framework [[2]](#reference) to produce the Hierarchical Double Deep Q-Network, or **HiDDeN**;
 1. Add **particle filter** [[4]](#reference) module to make inference to the collaborator’s behavior;
-1. Develop a technique called “**Goal Swapping**” to speed up the learning process.
 
 Because of the our limited resources, we have to split up the learning process into data collecting on CPUs and training on GPUs. As we know the model will be likely to overfit the dataset in this way, especially for the model like neural network. However, the result does show that with HiDDeN, the agent is able to learn some high level strategies and emerges collaborative patterns.
 
@@ -35,8 +34,8 @@ The Meta produces goal based on the Q value from the Critic, and it also uses **
 **Actor Module:**
 It basically is an AStar agent, which receives goal from Meta and act greedily to it. The code for the Actor Module is modified from the provided AStar agent [[8]](#reference).
 
-**Goal swapping:**
-We invent a method called “Goal Swapping” to gain data efficiency and speed up the data collecting process. At the data collecting process we don’t use Meta to output a goal, but instead, we use our current coordinate as the goal to update all the previous states within an episode. In this manner, say if our episode is 25 steps long, then we can gather 325(sum 1 to 25) data within one episode.
+**Off Policy Learning:**
+At the data collecting process we don’t use Meta to output a goal, but instead, we use our current coordinate as the goal to update all the previous states within an episode. In this manner, say if our episode is 25 steps long, then we can gather 325(sum 1 to 25) data within one episode. We use three behavior policies to interact with the collaborator: Always chasing the pig, random walking and always going to the lapis block. Since we know that combining TD learning, function approximation and off policy learning will easily cause divergence, we tried different tricks to avoid that. However, that still causes our agent behave strangely and get stuck in some states.
 
 ### HiDDeN Algorithm
 Since we didn’t deploy Project Malmo on our GPU machine, the whole learning process has to be split up into two stages: data collecting on CPUs and training on GPUs, aka we will be using the offline version of the algorithm to train our agent.
