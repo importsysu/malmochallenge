@@ -26,7 +26,7 @@ The Pig Chase Challenge task basically requires us to design an agent in coopera
 * To use GPUs, install tensorflow 0.8 rather than 1.0, and run `python train_gpu.py`.
 
 ## Abstract
-The difficulty of this challenge comes from the uncertainty of the collaborator’s behaviors and the conditions of success(requires two agents to corner the pig rather than to move directly to the pig's location). Under the context of this task, we hope the agent can learn strategies like flanking and ambushing as well as taking advantage of the behavioral pattern of the collaborator to catch the pig. Therefore, **temporal abstraction** and **inference** are needed for this specific task. We make three main contributions in this work:
+The difficulty of this challenge comes from the uncertainty of the collaborator’s behaviors and the conditions of success(requires two agents to corner the pig rather than to move directly to the pig's location). Under the context of this task, we hope the agent can learn strategies like flanking and ambushing as well as taking advantage of the behavioral pattern of the collaborator to catch the pig. Therefore, **temporal abstraction** and **inference** are needed for this specific task. We make two main contributions in this work:
 1. Combine Double Deep Q-Network [[3]](#reference) with the option framework [[2]](#reference) to produce the Hierarchical Double Deep Q-Network, or **HiDDeN**;
 1. Add **particle filter** [[4]](#reference) module to make inference to the collaborator’s behavior;
 
